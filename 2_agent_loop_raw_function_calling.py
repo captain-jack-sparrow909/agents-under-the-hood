@@ -91,7 +91,7 @@ def ollama_chat_traced(messages):
 
 # agent loop
 
-@traceable
+@traceable(name="ollama agent loop")
 def agent_loop(question: str):
     """run agent"""
     tools_dict = {"get_product_price": get_product_price, "get_product_discount": get_product_discount}
